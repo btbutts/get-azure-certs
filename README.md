@@ -13,14 +13,23 @@
 ## How do I use this script?
 * There's not a lot of prerequisites to use this PowerShell script.
   1. Ensure you've installed PowerShell 7.X.X or newer. I've tested this script on PowerShell 7.5.0 and 7.5.1 on MacOS and Windows
-  2. If you're executing on Windows, you will need OpenSSL binaries to run this script
-  3. Once the script obtains the certificates from Microsoft, it will convert them using OpenSSL and place them on your system's desktop.
+  2. PowerShell 5.0 and 5.1 will not work. Microsoft has completed a lot of work to update PowerShell to compete with bash, zsh, Python scripting, etc...\
+     Those changes were introduced in PowerShell 6 and 7. I've no idea if PowerShell 6 will work as I've not tested it. Just update to 7.5.X. They've made vast improvements to it!\
+     **Why won't PowerShell 5.0/5.1 work?** Unfortunately, it is unable to process portions of the script correctly. That's it!\
+     Microsoft has chosen not to package the latest PowerShell versions with Windows as its not needed for most end users running Windows.
+     If your an IT admin or someone at all technically-inclined running PowerShell, you seriously ***should*** be running 7.X.X by now...
+  4. If you're executing on Windows, you will need OpenSSL binaries to run this script
+  5. Once the script obtains the certificates from Microsoft, it will convert them using OpenSSL and place them on your system's desktop.
 
 ### OpenSSL on Windows (Skip if executing on MacOS or Linux)
 Unfortunately, Microsoft does not package OpenSSL with Windows. The script will attempt to download and install the OpenSSL binaries for you.
 * The script will identify x86, x86-64, and ARM64 systems and download the respective OpenSSL binaries installer MSI
 * If you have already installed OpenSSL on your system, the script will attempt to locate openssl.exe from the respective Program Files directory, depending on your system architecture.
 * You can modify the value of $OpenSSLpath within the script such that it uses your existing openssl binary.
+
+### PowerShell on MacOS
+The best way to install PowerShell on MacOS is with Homebrew
+* Microsoft explains the process [here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.5#install-the-latest-stable-release-of-powershell).
 
 ## Disclaimer!
 This script is provided completely as-is without any express or implied warranty. I am not responsible if the certificates obtained through this script stop working. That's expected and is the entire reason this script has been written. If installing PowerShell 7 or OpenSSL breaks your system in some unforseen way, I am not responsible. That is entirely on you to address. If you break your system after running this script, that is also entirely your responsibility and fault to remedy at your own expense. Really though, if you manage to break your system using this script, then you probably have no business managing IT, and definately not security products! 🙄
