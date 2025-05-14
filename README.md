@@ -29,7 +29,11 @@ Unfortunately, Microsoft does not package OpenSSL with Windows. The script will 
 
 ### PowerShell on MacOS
 The best way to install PowerShell on MacOS is with Homebrew
-* Microsoft explains the process [here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.5#install-the-latest-stable-release-of-powershell).
+* Microsoft explains the process [here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.5#install-the-latest-stable-release-of-powershell), but there's not much to it.\
+  1. Run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` from a terminal
+  2. Then run `brew install --cask powershell`
+  3. Finally, run `pwsh` to enter the PowerShell session on MacOS.\
+     You may need to open a new terminal Window for the command to be recognized as your session's $PATH will not have been updated during the install
 
 ## Disclaimer!
 This script is provided completely as-is without any express or implied warranty. I am not responsible if the certificates obtained through this script stop working. That's expected and is the entire reason this script has been written. If installing PowerShell 7 or OpenSSL breaks your system in some unforseen way, I am not responsible. That is entirely on you to address. If you break your system after running this script, that is also entirely your responsibility and fault to remedy at your own expense. Really though, if you manage to break your system using this script, then you probably have no business managing IT, and definately not security products! 🙄
