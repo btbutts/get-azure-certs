@@ -18,4 +18,9 @@
 ### OpenSSL on Windows (Skip if executing on MacOS or Linux)
 Unfortunately, Microsoft does not package OpenSSL with Windows. The script will attempt to download and install the OpenSSL binaries for you.
 * The script will identify x86, x86-64, and ARM64 systems and download the respective OpenSSL binaries installer MSI
-* 
+* If you have already installed OpenSSL on your system, the script will attempt to locate openssl.exe from the respective Program Files directory, depending on your system architecture.
+* You can modify the value of $OpenSSLpath within the script such that it uses your existing openssl binary.
+
+# Credits
+1. This script uses software packaged by the OpenSSL Project for use in the OpenSSL Toolkit https://openssl-library.org/
+2. 
