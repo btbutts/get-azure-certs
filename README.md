@@ -25,7 +25,10 @@
 Unfortunately, Microsoft does not package OpenSSL with Windows. The script will attempt to download and install the OpenSSL binaries for you.
 * The script will identify x86, x86-64, and ARM64 systems and download the respective OpenSSL binaries installer MSI
 * If you have already installed OpenSSL on your system, the script will attempt to locate openssl.exe from the respective Program Files directory, depending on your system architecture.
-* You can modify the value of $OpenSSLpath within the script such that it uses your existing openssl binary.
+* You can declare the script option $OpenSSLpath with the full _PATH_ to openssl.exe on your system when you run the script to skip checking for, and installing the included OpenSSL binaries.\
+  For example:
+  > .\get-azure-certs.ps1 -OpenSSLpath "C:\Program Files\OpenSSL-Win64\bin\openssl.exe"
+* Do keep in mind that this _PATH_ will vary depending on the architecture of your system.
 
 ### PowerShell on MacOS
 The best way to install PowerShell on MacOS is with Homebrew
