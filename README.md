@@ -11,12 +11,11 @@
 * This script addresses all but the last step, actually trying the converted certificate in your OIDC config
 
 ## How do I use this script?
-* There's not a lot of prerequisites to use this PowerShell script. 
+* There's not a lot of prerequisites to use this PowerShell script.
+  1. Ensure you've installed PowerShell 7.X.X or newer. I've tested this script on PowerShell 7.5.0 and 7.5.1 on MacOS and Windows
+  2. If you're executing on Windows, you will need OpenSSL binaries to run this script
 
-
-can be executed on Windows, MacOS, or Linux to obtain Microsoft's Public Certificates and convert them for use with Azure (Entra ID) OIDC Authenticaiton Setups
-
-
-A simple PowerShell script that can be executed on Windows, MacOS, or Linux to 
-obtain Microsoft's Public Certificates and convert them for use with Azure (Entra ID) OIDC Authenticaiton Setups
-
+### OpenSSL on Windows (Skip if executing on MacOS or Linux)
+Unfortunately, Microsoft does not package OpenSSL with Windows. The script will attempt to download and install the OpenSSL binaries for you.
+* The script will identify x86, x86-64, and ARM64 systems and download the respective OpenSSL binaries installer MSI
+* 
