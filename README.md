@@ -27,5 +27,5 @@ Unfortunately, Microsoft does not package OpenSSL with Windows. The script will 
    &emsp;&emsp;See: https://openssl-library.org/
 2. The OpenSSL installer used in this script has been packaged by [Shining Light Productions](https://slproweb.com/index.html) independently of the OpenSSL Project, using their source code\
    &emsp;&emsp;Although their software is free to use, show your appreciation by making a donation to them to reward them for their work\
-   &emsp;&emsp;There's a link at the bottom of their OpenSSL Product Page to make a one time or reoccurring donation to show your support!
+   &emsp;&emsp;There's a link at the bottom of their OpenSSL Product Page to make a one time or reoccurring donation to show your support!\
    &emsp;&emsp;See: https://slproweb.com/products/Win32OpenSSL.html
