@@ -22,5 +22,10 @@ Unfortunately, Microsoft does not package OpenSSL with Windows. The script will 
 * You can modify the value of $OpenSSLpath within the script such that it uses your existing openssl binary.
 
 # Credits
-1. This script uses software packaged by the OpenSSL Project for use in the OpenSSL Toolkit https://openssl-library.org/
-2. 
+1. This script uses software developed by the [OpenSSL Project](https://openssl-library.org/) for use in the OpenSSL Toolkit\
+   &emsp;&emsp;It is distributed with an [Apache v2.0 License](https://opensource.org/license/apache-2-0)\
+   &emsp;&emsp;See: https://openssl-library.org/
+2. The OpenSSL installer used in this script has been packaged by [Shining Light Productions](https://slproweb.com/index.html) independently of the OpenSSL Project, using their source code\
+   &emsp;&emsp;Although their software is free to use, show your appreciation by making a donation to them to reward them for their work\
+   &emsp;&emsp;There's a link at the bottom of their OpenSSL Product Page to make a one time or reoccurring donation to show your support!
+   &emsp;&emsp;See: https://slproweb.com/products/Win32OpenSSL.html
